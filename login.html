@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Log in to the Joliemar Rivera portfolio.">
+  <title>Login | Joliemar Rivera Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="auth-link" aria-current="page">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">User Login</h1>
+    <p class="lead">Enter your username and password to log in.</p>
+
+    <section class="card form" aria-labelledby="login-form-title">
+      <h2 id="login-form-title">Login</h2>
+
+      <form id="login-form" data-form="login" novalidate>
+        <div class="field">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" data-label="Username"
+                 autocomplete="username" required aria-describedby="username-error">
+          <p class="field-error" id="username-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" data-label="Password"
+                 autocomplete="current-password" required aria-describedby="password-error">
+          <p class="field-error" id="password-error" hidden></p>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn">Login</button>
+          <a class="btn btn-secondary" href="index.html">Cancel</a>
+        </div>
+
+        <div class="status" id="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <p class="form-note">Don't have an account? <a href="register.html">Register here</a></p>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

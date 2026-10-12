@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Joliemar Rivera by email or through the message form.">
+  <title>Contact | Joliemar Rivera Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+        <li><a href="login.html" id="auth-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Contact Me</h1>
+    <p class="lead">
+      Have a question? Email me at
+      <a href="mailto:joliemarrivera@gmail.com">joliemarrivera@gmail.com</a>
+      or send a message below.
+    </p>
+
+    <section class="card form" aria-labelledby="contact-form-title">
+      <h2 id="contact-form-title">Send a Message</h2>
+      <p class="hint">All fields are required.</p>
+
+      <form id="contact-form" data-form="contact" novalidate>
+        <div class="field">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" data-label="Name"
+                 autocomplete="name" required aria-describedby="name-error">
+          <p class="field-error" id="name-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="email">Your email</label>
+          <input type="email" id="email" name="email" data-label="Email"
+                 autocomplete="email" required aria-describedby="email-hint email-error">
+          <span class="hint" id="email-hint">Example: name@example.com</span>
+          <p class="field-error" id="email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" data-label="Message"
+                    minlength="10" required aria-describedby="message-hint message-error"></textarea>
+          <span class="hint" id="message-hint">At least 10 characters.</span>
+          <p class="field-error" id="message-error" hidden></p>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn">Send Message</button>
+          <a class="btn btn-secondary" href="index.html">Cancel</a>
+        </div>
+
+        <div class="status" id="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
+    </section>
+  </main>
+
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

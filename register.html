@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create an account on the Joliemar Rivera portfolio.">
+  <title>Register | Joliemar Rivera Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav aria-label="Main navigation">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="login.html" id="auth-link">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1 class="page-title">Create Account</h1>
+    <p class="lead">Fill in the form to register. All fields are required.</p>
+
+    <section class="card form" aria-labelledby="register-form-title">
+      <h2 id="register-form-title">Register</h2>
+
+      <form id="register-form" data-form="register" novalidate>
+        <div class="field">
+          <label for="reg-username">Username</label>
+          <input type="text" id="reg-username" name="username" data-label="Username"
+                 minlength="3" autocomplete="username" required
+                 aria-describedby="reg-username-hint reg-username-error">
+          <span class="hint" id="reg-username-hint">At least 3 characters.</span>
+          <p class="field-error" id="reg-username-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="reg-email">Email address</label>
+          <input type="email" id="reg-email" name="email" data-label="Email"
+                 autocomplete="email" required
+                 aria-describedby="reg-email-hint reg-email-error">
+          <span class="hint" id="reg-email-hint">Example: name@example.com</span>
+          <p class="field-error" id="reg-email-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="reg-password">Password</label>
+          <input type="password" id="reg-password" name="password" data-label="Password"
+                 minlength="6" autocomplete="new-password" required
+                 aria-describedby="reg-password-hint reg-password-error">
+          <span class="hint" id="reg-password-hint">At least 6 characters.</span>
+          <p class="field-error" id="reg-password-error" hidden></p>
+        </div>
+
+        <div class="field">
+          <label for="reg-confirm">Confirm password</label>
+          <input type="password" id="reg-confirm" name="confirm" data-label="Confirm password"
+                 autocomplete="new-password" required aria-describedby="reg-confirm-error">
+          <p class="field-error" id="reg-confirm-error" hidden></p>
+        </div>
+
+        <div class="btn-row">
+          <button type="submit" class="btn">Register</button>
+          <a class="btn btn-secondary" href="index.html">Cancel</a>
+        </div>
+
+        <div class="status" id="form-status" role="status" aria-live="polite" hidden></div>
+      </form>
+
+      <p class="form-note">Already have an account? <a href="login.html">Login here</a></p>
+    </section>
+  </main>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
